@@ -1,0 +1,9 @@
+#pragma once
+#include "LampBigNumber.h"
+#include "LampDict.h"
+#include "LampOpt.h"
+namespace OpenLamp{
+    using namespace LampBigNumber;
+    using namespace LampDict;
+    using namespace LampOpt;
+};
