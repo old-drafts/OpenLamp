@@ -1,9 +1,8 @@
 #pragma once
 #include<string>
 #include<vector>
-using namespace std;
 namespace LampBigNumber{
-    struct BigInt:vector<int>{
+    struct BigInt:std::vector<int>{
     	bool Positive=1;
         BigInt(int n=0){
         	if(n<0){
@@ -33,8 +32,8 @@ namespace LampBigNumber{
             (*this).check();
 	    }
     };
-    istream& operator>>(istream &is,BigInt &n){
-        string s;
+    std::istream& operator>>(std::istream &is,BigInt &n){
+        std::string s;
         is>>s;
         n.clear();
         for(int i=s.size()-1;i>=0;--i){
@@ -46,7 +45,7 @@ namespace LampBigNumber{
 		}
         return is;
     }
-    ostream& operator<<(ostream &os,const BigInt &n){
+    std::ostream& operator<<(std::ostream &os,const BigInt &n){
         if(n.empty())os<<0;
         if(n.Positive==0)os<<'-';
         for(int i=n.size()-1;i>=0;--i)os<<n[i];

@@ -5,16 +5,16 @@ namespace LampDict{
 		LampBigNumber::BigInt now=1,total=1;
 		int _size,_length;
 		bool _tag=false,_done=false;
-		vector<int>reg;
-		string _dict=" ";	
-		WordBook(string dict,int length){
+		std::vector<int>reg;
+		std::string _dict=" ";	
+		WordBook(std::string dict,int length){
 			_size=dict.size(),_dict+=dict,_length=length,total=LampBigNumber::Bpow(_length,_size);
 			reg.insert(reg.end(),_length+1,1);
 		}
-		inline string pop(){
-			if(_done)return string();
+		inline std::string pop(){
+			if(_done)return std::string();
 			++now;
-			string result("");
+			std::string result("");
 			for(int i=1;i<=_length;++i){
 				result.push_back(_dict[reg[i]]);
 				if(_tag){

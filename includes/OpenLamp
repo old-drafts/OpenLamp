@@ -2,8 +2,10 @@
 #include "LampBigNumber.h"
 #include "LampDict.h"
 #include "LampOpt.h"
+#include "LampIO.h"
 namespace OpenLamp{
     using namespace LampBigNumber;
     using namespace LampDict;
     using namespace LampOpt;
+    using namespace LampIO;
 };
